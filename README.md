@@ -30,11 +30,18 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a library that focuses on building out reusable components. It allows for faster response times due to the fact that it uses a "virtual DOM" that re-renders only specific parts of the page at specific times as opposed to refreshing the whole page every time there is a change.
+
+
+
 1. Describe component state.
+Component state is used to store information about the component that can change over time. The change can happen based on user interaction or a change in data based on a server request. The component state can be used to effect the layout and behavior of the page. 
 
 1. Describe props.
+Props stands for "properties", and they're data, state, or information passed down from one component to it's child. 
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+Side effects are basically just "things that happen" to your react app components.  You can set it so something happens every time you re-render the page, or whenever there is a change to a specific state. You enter a callback function as an argument for useEffect(), and that function will be invoked every time the page renders. If you put a slice of state in [brackets] as the second argument, the callback function will be invoked every time the slice of state changes value. If you put empty brackets then the callback function will be invoked on the first render of the app.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
