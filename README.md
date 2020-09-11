@@ -35,10 +35,10 @@ React is a library that focuses on building out reusable components. It allows f
 
 
 1. Describe component state.
-Component state is used to store information about the component that can change over time. The change can happen based on user interaction or a change in data based on a server request. The component state can be used to effect the layout and behavior of the page. 
+Component state is used to store information about the component that can change over time. You can set the change to happen based on some type of user interaction or a change in data based on a server request. The component state can be used to effect the layout and behavior of the page. 
 
 1. Describe props.
-Props stands for "properties", and they're data, state, or information passed down from one component to it's child. 
+Props stands for "properties", and they're data, state, or information passed down from one component to it's child. The props get passed as an object and each prop's value can be accessed throughout the component.
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
 Side effects are basically just "things that happen" to your react app components.  You can set it so something happens every time you re-render the page, or whenever there is a change to a specific state. You enter a callback function as an argument for useEffect(), and that function will be invoked every time the page renders. If you put a slice of state in [brackets] as the second argument, the callback function will be invoked every time the slice of state changes value. If you put empty brackets then the callback function will be invoked on the first render of the app.
