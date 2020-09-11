@@ -4,9 +4,12 @@ import styled, {keyframes} from 'styled-components';
 import axios from 'axios';
 import Character from './components/Character';
 
+const H1 = styled.h1`
+font-family: orbitron;
+`
 
 const App = () => {
-  const [characters, setCharacters] = useState('');
+  const [characters, setCharacters] = useState([]);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -19,12 +22,11 @@ axios.get('https://swapi.dev/api/people')
   setCharacters(res.data.results);
 })
 }, []);
-console.log(characters);
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
-      {characters.map((char)=>{
-        return <Character  />
+      <H1 className="Header">Characters</H1>
+      {characters.map(char=>{
+        return <Character key={char.name} character={char} />
       })}
     </div>
   );
